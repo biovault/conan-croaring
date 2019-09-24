@@ -20,12 +20,12 @@ environment:
         secure: g+1lNdgrCLmyKNf3KvbHSln5A1H7BsVhsMsIbwgo+UU=    
     CONAN_UPLOAD_ONLY_WHEN_STABLE: 1
     
-  matrix:
-    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
-      CONAN_VISUAL_VERSIONS: 15
-      CONAN_VISUAL_RUNTIMES: MD
-      CONAN_ARCHS: x86_64
-      CONAN_BUILD_TYPES: Release      
+    matrix:
+        - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+          CONAN_VISUAL_VERSIONS: 15
+          CONAN_VISUAL_RUNTIMES: MD
+          CONAN_ARCHS: x86_64
+          CONAN_BUILD_TYPES: Release      
 
 install:
   - set PATH=%PYTHON_HOME%;%PYTHON_HOME%/Scripts/;%PATH%
@@ -37,7 +37,7 @@ notifications:
   - provider: Email
     to: 
         - b.van_lew@lumc.nl
-    subject: CRoaring package Windows build: {{status}}
+    subject: "CRoaring package Windows build: {{status}}"
     message: "URL is {{buildUrl}}."
     on_build_success: true
     on_build_failure: true
