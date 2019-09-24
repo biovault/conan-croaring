@@ -45,7 +45,6 @@ install:
   - ./.ci/install.sh
 
 script:
-  - conan remote add lkeb_repo http://cytosplore.lumc.nl:8081/artifactory/api/conan/conan-local
   - chmod +x .ci/run.sh
   - ./.ci/run.sh
 
