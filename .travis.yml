@@ -48,3 +48,10 @@ script:
   - conan remote add lkeb_repo http://cytosplore.lumc.nl:8081/artifactory/api/conan/conan-local
   - chmod +x .ci/run.sh
   - ./.ci/run.sh
+
+notifications:
+  email:
+    recipients:
+      - b.van_lew@lumc.nl
+    on_success: always # default: change
+    on_failure: always # default: always
