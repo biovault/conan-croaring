@@ -10,8 +10,7 @@ branches:
     - /stable\/*/
     
 environment:
-  PYTHON_HOME: "C:\\Python37"
-
+    PYTHON_HOME: "C:\\Python37"
     CONAN_UPLOAD: http://cytosplore.lumc.nl:8081/artifactory/api/conan/conan-local
     CONAN_STABLE_BRANCH_PATTERN: "stable/*"
     CONAN_USERNAME: "lkeb" # name used for package naming
