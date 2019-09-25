@@ -41,12 +41,13 @@ conan_basic_setup()''')
     def package(self):
         os.chdir("CRoaring/include")
         self.copy("*.h", src="CRoaring/include", dst="include", keep_path=True)
-        self.copy("*.hpp", src="CRoaring/include", dst="include", keep_path=True)
-        self.copy("*.h", src="CRoaring/cpp", dst="include", keep_path=False)
-        self.copy("*.hpp", src="CRoaring/cpp", dst="include", keep_path=False)        
+        self.copy("*.hpp", src="CRoaring/include", dst="include", keep_path=True)       
         self.copy("*.dll", dst="bin", keep_path=False)
         self.copy("*.so", dst="lib", keep_path=False)
         self.copy("*.dylib", dst="lib", keep_path=False)
         self.copy("*.a", dst="lib", keep_path=False)
+        os.chdir("../..")
+        self.copy("*.h", src="CRoaring/cpp", dst="include", keep_path=False)
+        self.copy("*.hpp", src="CRoaring/cpp", dst="include", keep_path=False) 
 
 
