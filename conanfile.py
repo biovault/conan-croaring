@@ -46,5 +46,5 @@ conan_basic_setup()''')
         self.copy("*.dylib", dst="lib", keep_path=False)
         self.copy("*.a", dst="lib", keep_path=False)
         self.copy("*.hh", src="CRoaring/cpp", dst="include", keep_path=False)
-
+        self.copy(pattern="*.pdb", dst="bin", keep_path=False)
 
